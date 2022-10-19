@@ -5,6 +5,7 @@ test('should have a submit button', () => {
 	render(<Input/>)
 	const labelElement = screen.getByLabelText('Task:')
 	expect(labelElement).toBeInTheDocument();
+	
 });
 test("Should have a task input", () => {
 	render(<Input name='Task'/>);
@@ -23,4 +24,12 @@ test('should have a submit button', () => {
 	render(<Input />)
 	const buttonElement = screen.getByRole('button')
 	expect(buttonElement).toBeInTheDocument()
-})
+	expect(buttonElement).toBeVisible();
+});
+
+
+test("should have a submit button", () => {
+	render(<Input />);
+	const buttonElement = screen.getByRole("button");
+	expect(buttonElement).toBeVisible();
+});
