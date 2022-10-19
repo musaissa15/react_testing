@@ -8,7 +8,8 @@ const Input = () => {
 				<label>
 					Task:
 					<input type="text" placeholder="Please Enter your Task" />
-				</label>
+        </label>
+        <button type="submit"> Add </button>
 			</form>
 		</div>
 	);

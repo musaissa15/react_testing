@@ -1,4 +1,4 @@
-import {render, renderHook, screen} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import Input from "./Input.jsx";
 
 test('should have a submit button', () => {
@@ -17,4 +17,10 @@ test('should have a placeholder', () => {
 	render(<Input />)
 	const placeholder = screen.getByPlaceholderText('Please Enter your Task')
 	expect(placeholder).toBeInTheDocument()
+});
+
+test('should have a submit button', () => {
+	render(<Input />)
+	const buttonElement = screen.getByRole('button')
+	expect(buttonElement).toBeInTheDocument()
 })
