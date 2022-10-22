@@ -1,18 +1,31 @@
-import React from 'react'
-
+import React, { useState } from "react";
+// import { useState } from 'react'
 const Input = () => {
-  return (
-		<div>
-			Input
-			<form>
-				<label>
-					Task:
-					<input type="text" placeholder="Please Enter your Task" />
-        </label>
-        <button type="submit" > Add </button>
-			</form>
-		</div>
-	);
+    const [task, setTask] = useState('');
+    
+    const handleChange = (e) => {
+        setTask(e.target.value);
+        console.log(e.target.value);
+    };
+    
+    const addTask = () => {
+        console.log(task)
+    }
+
+    return (
+        <div>
+            <input
+                type='text'
+                placeholder='Please Enter your Task'
+                onChange={(e) => {
+                    handleChange(e)
+                }}
+            />
+            <button type="submit"
+            onClick={addTask}
+            > Add </button>
+    </div>
+  )
 }
 
 export default Input
