@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import { useState } from 'react'
 const Input = () => {
     const [task, setTask] = useState('');
-    
+    const [list, setlist] = useState([])
     const handleChange = (e) => {
         setTask(e.target.value);
         console.log(e.target.value);
