@@ -1,8 +1,21 @@
 import React from 'react'
-
-export const List = ({list}) => {
+import Todo from './Components/Input/Todo'
+const List = ({todos}) => {
   return (
-      <div>
-          {list}</div>
+    <div>
+      List
+      <ul>
+        {todos.map((t) => {
+          return (
+						<li>
+							<Todo key={t.id} t={t} />
+						</li>
+					);
+    
+        })}
+</ul>
+    </div>
   )
 }
+
+export default List
