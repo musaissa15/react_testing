@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import v4 from "uuid";
+import  {v4 as uuidv4} from "uuid";
 const Input = ({addTodo}) => {
     const [todo, setTodo] = useState({
         id: '',
@@ -14,7 +14,7 @@ setTodo({ ...todo, task: event.target.value});
     const handleSubmit = (event) => { 
         event.preventDefault()
         if (todo.task.trim()) {
-            addTodo({...todo, id: 'uuid.v4'()});
+            addTodo({...todo, id: 'uuid.v4()'});
             // reset form
             setTodo({...todo, task: ''})
         }

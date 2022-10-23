@@ -11,10 +11,10 @@ function App() {
 	return (
 		<div>
 			<h1> Todo List</h1>
-			<Input/>		
-			<List addTodo={addTodo} />
-			</div>
-	)
+			<Input addTodo={addTodo} />
+			<List todos={todos}/>
+		</div>
+	);
 }
 
 export default App;
