@@ -1,21 +1,20 @@
-import React from 'react'
-import Todo from './Components/Input/Todo'
-const List = ({todos}) => {
-  return (
-    <div>
-      List
-      <ul>
-        {todos.map((t) => {
-          return (
+import React from "react";
+import Todo from "./Input/Todo";
+const List = ({ todos }) => {
+	return (
+		<div>
+			List
+			<ul>
+				{todos.map((t) => {
+					return (
 						<li>
 							<Todo key={t.id} t={t} />
 						</li>
 					);
-    
-        })}
-</ul>
-    </div>
-  )
-}
+				})}
+			</ul>
+		</div>
+	);
+};
 
-export default List
+export default List;

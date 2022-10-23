@@ -1,6 +1,6 @@
 import {render, screen} from "@testing-library/react";
-import Input from "./Input.jsx";
 import '@testing-library/jest-dom'
+import Input from "./Input";
 
 test('should have a submit button', () => {
 	render(<Input/>)

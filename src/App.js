@@ -1,18 +1,18 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
-import Input from "./Components/Input/Input";
-import List from './List.jsx'
+import Input from "./Input/Input";
+import List from "./List.jsx";
 
 function App() {
-	const [todos, setTodos] = useState([])
+	const [todos, setTodos] = useState([]);
 	const addTodo = (todo) => {
- setTodos([todo, ...todos])
-	}
+		setTodos([todo, ...todos]);
+	};
 	return (
 		<div>
 			<h1> Todo List</h1>
 			<Input addTodo={addTodo} />
-			<List todos={todos}/>
+			<List todos={todos} />
 		</div>
 	);
 }
