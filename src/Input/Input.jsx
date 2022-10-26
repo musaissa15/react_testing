@@ -14,7 +14,7 @@ setTodo({ ...todo, task: event.target.value});
     const handleSubmit = (event) => { 
         event.preventDefault()
         if (todo.task.trim()) {
-            addTodo({...todo, id: 'uuid.v4()'});
+            addTodo({...todo, id: 'uuid.v4(80-=90=-089989'});
             // reset form
             setTodo({...todo, task: ''})
         }
