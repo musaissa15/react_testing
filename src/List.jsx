@@ -1,6 +1,6 @@
 import React from "react";
 import Todo from "./Input/Todo";
-const List = ({ todos }) => {
+const List = ({ todos, removeTodo, toggleComplete }) => {
 	return (
 		<div>
 			List
@@ -8,7 +8,12 @@ const List = ({ todos }) => {
 				{todos.map((t) => {
 					return (
 						<li>
-							<Todo key={t.id} t={t} />
+							<Todo
+								key={t.id}
+								t={t}
+								removeTodo={removeTodo}
+								toggleComplete={toggleComplete}
+							/>
 						</li>
 					);
 				})}
