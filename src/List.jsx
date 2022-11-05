@@ -17,6 +17,7 @@ const List = ({ todos, removeTodo, toggleComplete }) => {
 						</li>
 					);
 				})}
+
 			</ul>
 		</div>
 	);

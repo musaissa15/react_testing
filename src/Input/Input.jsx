@@ -14,7 +14,7 @@ setTodo({ ...todo, task: event.target.value});
     const handleSubmit = (event) => { 
         event.preventDefault()
         if (todo.task.trim()) {
-            addTodo({...todo, id: 'uuid.v4(80-=90=-089989'});
+            addTodo({...todo, id: uuidv4()});
             // reset form
             setTodo({...todo, task: ''})
         }
@@ -26,10 +26,12 @@ setTodo({ ...todo, task: event.target.value});
 					<label>
 						Task:
 						<input
+							label="Task"
 							type="text"
+							name="task"
 							placeholder="Please Enter your Task"
-                        onChange={handleChange}
-                        value={todo.task}
+							onChange={handleChange}
+							value={todo.task}
 						/>
 					</label>
 					<button type="submit"> Add </button>

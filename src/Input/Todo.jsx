@@ -11,10 +11,11 @@ const Todo = ({ t, toggleComplete, removeTodo }) => {
 		}
 	return (
 		<div>
+			<ul>
 			<li
 				style={{
 					color: "black",
-					textDecoration: Todo.completed ? "line-through" : null,
+					textDecoration: t.completed ? "line-through" : null,
 				}}
 			>
 				{t.task}
@@ -25,6 +26,7 @@ const Todo = ({ t, toggleComplete, removeTodo }) => {
 				/>
 				<button onClick={handleRemoveClick}>x</button>
 			</li>
+			</ul>
 		</div>
 	);
 };
