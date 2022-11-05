@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
+import "./Components/List/List.css"
 import Input from "./Components/Input/Input.jsx";
 import List from "./Components/List/List.jsx";
+
 
 function App() {
 	const [todos, setTodos] = useState([]);

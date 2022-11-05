@@ -2,7 +2,7 @@ import React from "react";
 import Todo from "../Todo/Todo.jsx";
 const List = ({ todos, removeTodo, toggleComplete }) => {
 	return (
-		<div>
+		<div className="List">
 			List
 			<ul>
 				{todos.map((t) => {
