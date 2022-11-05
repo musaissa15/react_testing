@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import Input from "./Input/Input";
-import List from "./List.jsx";
+import Input from "./Components/Input/Input.jsx";
+import List from "./Components/List/List.jsx";
 
 function App() {
 	const [todos, setTodos] = useState([]);
@@ -9,26 +9,26 @@ function App() {
 		setTodos([todo, ...todos]);
 	};
 
-	  function toggleComplete(id) {
-			setTodos(
-				todos.map((todo) => {
-					if (todo.id === id) {
-						return {
-							...todo,
-							completed: !todo.completed,
-						};
-					}
-					return todo;
-				})
-			);
-	  }
-	
-	  function removeTodo(id) {
-			setTodos(todos.filter((todo) => todo.id !== id));
-	  }
-	
+	function toggleComplete(id) {
+		setTodos(
+			todos.map((todo) => {
+				if (todo.id === id) {
+					return {
+						...todo,
+						completed: !todo.completed,
+					};
+				}
+				return todo;
+			})
+		);
+	}
+
+	function removeTodo(id) {
+		setTodos(todos.filter((todo) => todo.id !== id));
+	}
+
 	return (
-		<div>
+		<div className="app-container">
 			<h1> Todo List</h1>
 			<Input addTodo={addTodo} />
 			<List

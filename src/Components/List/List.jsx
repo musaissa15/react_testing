@@ -1,5 +1,5 @@
 import React from "react";
-import Todo from "./Input/Todo";
+import Todo from "../Todo/Todo.jsx";
 const List = ({ todos, removeTodo, toggleComplete }) => {
 	return (
 		<div>
@@ -17,7 +17,6 @@ const List = ({ todos, removeTodo, toggleComplete }) => {
 						</li>
 					);
 				})}
-
 			</ul>
 		</div>
 	);
